@@ -1,0 +1,65 @@
+.meet {
+  background-color: #f5f7fa;
+  padding: 32px 0;
+
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 78px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  &-img {
+    img {
+      width: 100%;
+      max-width: 326px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &-content {
+    flex: 3;
+    &__title {
+      font-size: 16px;
+      color: #717171;
+      margin-bottom: 16px;
+    }
+    &__author {
+      font-size: 20px;
+      line-height: 28px;
+      color: #4caf4f;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    &__position {
+      color: #89939e;
+      margin-bottom: 32px;
+    }
+  }
+  &-imgs {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-right: 26px;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+      color: #4caf4f;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      img {
+        margin-left: 8px;
+      }
+    }
+  }
+}

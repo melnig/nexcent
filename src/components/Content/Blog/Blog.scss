@@ -1,0 +1,75 @@
+.blog {
+  padding-bottom: 64px;
+  &-title {
+    font-size: 36px;
+    color: #4d4d4d;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  &-subtitle {
+    max-width: 628px;
+    margin: 0 auto;
+    text-align: center;
+    color: #717171;
+    margin-bottom: 16px;
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 24px;
+    // flex-wrap: wrap;
+    &__item {
+      width: 100%;
+      max-width: 348px;
+      min-height: 100%;
+      text-align: center;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+      &-block {
+        background-color: #f5f7fa;
+        position: absolute;
+        width: 90%;
+        border-radius: 8px;
+        bottom: -64px;
+        width: calc(100% - 32px); // або 90% якщо простіше
+        max-width: 320px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 18px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 5;
+        h4 {
+          font-size: 20px;
+          color: #717171;
+          font-weight: 600;
+          margin-bottom: 16px;
+        }
+        div {
+          a {
+            display: inline-flex;
+            color: #4caf4f;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__item {
+      margin-bottom: 72px;
+    }
+  }
+}

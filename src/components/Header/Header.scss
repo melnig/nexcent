@@ -1,0 +1,150 @@
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #f5f7fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 22px 0;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-desktop__menu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    .header-nav {
+      display: flex;
+      gap: 50px;
+      flex: 1;
+      justify-content: center;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+    .header-right {
+      flex-shrink: 0;
+      display: flex;
+      gap: 14px;
+    }
+    .btn {
+      padding: 10px 20px;
+    }
+    .btn-signup {
+      background-color: #4caf4f;
+      border-radius: 4px;
+      color: #fff;
+      transition: background-color 0.3s;
+      &:hover {
+        background: #449a45;
+        cursor: pointer;
+      }
+    }
+  }
+  &-brand {
+    display: flex;
+    .logo-text {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #263238;
+    }
+  }
+  &-logo {
+    margin-right: 8px;
+  }
+  &-mobileMenu {
+    position: absolute;
+    top: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 20px 24px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    animation: slideDown 0.3s ease-out;
+    .signup {
+      padding: 10px 20px;
+      background-color: #4caf4f;
+      border-radius: 4px;
+      color: #fff;
+      transition: background-color 0.3s;
+      &:hover {
+        background: #449a45;
+        cursor: pointer;
+      }
+    }
+    .header-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+      a {
+        color: #263238;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        transition: all 0.2s;
+        padding: 8px;
+        &:hover {
+          color: #4caf4f;
+          background-color: #f5f7fa;
+        }
+      }
+    }
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .btn {
+        padding: 12px;
+        font-size: 15px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .login {
+        background: #f0f0f0;
+        color: #263238;
+
+        &:hover {
+          background: #e0e0e0;
+        }
+      }
+    }
+  }
+}
+
+// Анімація
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-desktop__menu .header-nav {
+    gap: 30px;
+  }
+
+  .header-desktop__menu .btn {
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 810px) {
+  .header-desktop__menu .header-nav {
+    gap: 20px;
+  }
+}
