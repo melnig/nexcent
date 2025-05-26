@@ -11,6 +11,7 @@
       flex-direction: column;
       text-align: center;
       align-items: center;
+      gap: 32px;
     }
   }
   &-img {
@@ -46,11 +47,21 @@
     align-items: center;
     gap: 36px;
     margin-right: 26px;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      align-items: center;
+      margin: 0;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
   }
   &-footer {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
     a {
       color: #4caf4f;
       font-size: 16px;

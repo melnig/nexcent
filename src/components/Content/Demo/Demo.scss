@@ -11,6 +11,9 @@
     max-width: 887px;
     margin: 0 auto;
     margin-bottom: 32px;
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
   }
   .btn {
     display: inline-flex;

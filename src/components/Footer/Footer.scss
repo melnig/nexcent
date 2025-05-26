@@ -88,6 +88,16 @@
       align-items: center;
       text-align: center;
     }
+    &-copy {
+      margin-top: 16px;
+    }
+    &-logo {
+      justify-content: center;
+    }
+    &-socials {
+      justify-content: center;
+      margin-top: 16px;
+    }
 
     &-right {
       flex-direction: column;

@@ -58,3 +58,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .help {
+    &-wrapper {
+      gap: 36px;
+      text-align: center;
+    }
+    &-right {
+      grid-template-columns: 1fr;
+    }
+  }
+}
